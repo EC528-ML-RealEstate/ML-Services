@@ -22,8 +22,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Deploy source-code
-        uses: EC528-ML-RealEstate/ML-Services@main
+        name: Check out repository
+      - uses: EC528-ML-RealEstate/ML-Services@main
+        name: auto deployment
         env:
           HOST: ${{ secrets.SSH_HOST }}
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
