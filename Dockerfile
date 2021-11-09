@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 # Setup python
-FROM tensorflow/tensorflow:latest-gpu-jupyter
+FROM tensorflow/tensorflow:2.6.0
 RUN apt-get update -y && \
-    apt-get install -y apt-utils gfortran musl-dev gcc make g++ libffi-dev libxml2-dev \
+    apt-get install -y apt-utils gfortran musl-dev gcc make g++ libffi-dev libxml2-dev vim\
     libxml2 libxslt-dev
 RUN pip install --upgrade pip
 ADD requirements.txt .
