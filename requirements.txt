@@ -5,3 +5,4 @@ pandas
 tensorflow
 tensorflow-text
 tensorflow-gpu
+gdown
